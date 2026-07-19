@@ -108,13 +108,13 @@ COTHER=
 # XXX -
 # XXX - remove text above, including this line - XXX
 #
-# Example: OPT= -O0 -ggdb3
+# Example: COPT= -O0 -ggdb3
 #
-OPT= -O3
+COPT= -O3
 
 # Default flags for ANSI C compilation
 #
-CFLAGS= ${CSTD} ${CWARN} ${ARCH} ${CDEFINE} ${CINCLUDE} ${COTHER} ${OPT}
+CFLAGS= ${CSTD} ${CWARN} ${ARCH} ${CDEFINE} ${CINCLUDE} ${COTHER} ${COPT}
 
 # Libraries needed to build
 #

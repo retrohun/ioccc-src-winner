@@ -325,6 +325,22 @@ echo "-s"
 echo "NEXT_YEAR=$NEXT_YEAR"
 
 
+# output site metadata
+#
+echo "-s"
+echo "OG_TYPE=website"
+echo "-s"
+echo "OG_IMAGE=$SITE_URL/png/ioccc-card-1280.png"
+echo "-s"
+echo "OG_IMAGE_WIDTH=1280"
+echo "-s"
+echo "OG_IMAGE_HEIGHT=720"
+echo "-s"
+echo "OG_IMAGE_ALT=The International Obfuscated C Code Contest"
+echo "-s"
+echo "CANONICAL_URL=$URL"
+
+
 # All Done!!! All Done!!! -- Jessica Noll, Age 2
 #
 exit 0

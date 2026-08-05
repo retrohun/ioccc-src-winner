@@ -332,6 +332,66 @@ function output_abstract
 }
 
 
+# Write the video ID of the first YouTube link in the README to standard output (stdout)
+# This is used for thumbnail images, so videos we know don't have one are ignored
+#
+# usage:
+#       output_youtube_img_id YYYY/dir/README.md
+#
+# returns:
+#       0 ==> no errors detected, but output may be empty
+#     > 0 ==> function error number
+#
+function output_youtube_img_id
+{
+    local README_PATH; # YYYY/dir/README.md
+    local VIDEO_ID;    # Extracted video ID (if it exists)
+
+    # Video IDs for which YouTube has no maxresdefault.jpg
+    # This should only be old videos
+    #
+    local NO_MAXRES_ID_SET=(
+      "xTseqWCtAUA"           # 2004/vik1
+      "-ga41edXw3A"           # 2011/eastman
+    )
+
+    # parse args
+    #
+    if [[ $# -ne 1 ]]; then
+        echo "$0: ERROR: in output_youtube_img_id: expected 1 arg, found $#" 1>&2
+        return 1
+    fi
+    README_PATH="$1"
+    if [[ ! -e $README_PATH ]]; then
+        echo "$0: ERROR: in output_youtube_img_id: README.md does not exist: $README_PATH" 1>&2
+        return 2
+    fi
+    if [[ ! -f $README_PATH ]]; then
+        echo "$0: ERROR: in output_youtube_img_id: README.md is not a file: $README_PATH" 1>&2
+        return 3
+    fi
+    if [[ ! -r $README_PATH ]]; then
+        echo "$0: ERROR: in output_youtube_img_id: README.md is not a readable file: $README_PATH" 1>&2
+        return 4
+    fi
+
+    VIDEO_ID=$(grep -o -E -m 1 \
+      -e 'youtube\.com/(watch\?v=|live/|embed/)[A-Za-z0-9_-]{11}' \
+      -e 'youtu\.be/[A-Za-z0-9_-]{11}' "$README_PATH" 2>/dev/null |
+      head -1 | grep -o -E '[A-Za-z0-9_-]{11}$')
+
+    local ID
+    for ID in "${NO_MAXRES_ID_SET[@]}"; do
+        if [[ $VIDEO_ID == "$ID" ]]; then
+            return 0
+        fi
+    done
+
+    printf '%s\n' "$VIDEO_ID"
+    return 0
+}
+
+
 # setup
 #
 export NOOP=
@@ -709,7 +769,7 @@ echo "TITLE=$YYYY_DIR - $AWARD"
 # output DESCRIPTION substitution
 #
 echo "-s"
-echo "DESCRIPTION=$YEAR_DIR IOCCC entry $ENTRY_DIR - $AWARD"
+echo "DESCRIPTION=${ABSTRACT%.}. $YEAR_DIR IOCCC entry $ENTRY_DIR - $AWARD"
 
 
 # output KEYWORDS substitution
@@ -778,6 +838,30 @@ echo "INVENTORY_TEXT=Inventory"
 #
 echo "-s"
 echo "YEAR=$YEAR_DIR"
+
+
+# output metadata
+#
+echo "-s"
+echo "OG_TYPE=article"
+
+YOUTUBE_ID=$(output_youtube_img_id "$YYYY_DIR/README.md")
+status="$?"
+if [[ $status -ne 0 ]]; then
+    echo "$0: ERROR: output_youtube_img_id failed, error: $status" 1>&2
+    exit 1
+fi
+
+if [[ -n $YOUTUBE_ID ]]; then
+    echo "-s"
+    echo "OG_IMAGE=https://i.ytimg.com/vi/$YOUTUBE_ID/maxresdefault.jpg"
+    echo "-s"
+    echo "OG_IMAGE_WIDTH=1280"
+    echo "-s"
+    echo "OG_IMAGE_HEIGHT=720"
+    echo "-s"
+    echo "OG_IMAGE_ALT=Video of IOCCC entry $YYYY_DIR"
+fi
 
 
 # All Done!!! All Done!!! -- Jessica Noll, Age 2

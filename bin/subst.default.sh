@@ -11,7 +11,7 @@
 #
 # IMPORTANT: Each command line option / argument MUST be printed on a separate line!
 #
-# Copyright (c) 2024 by Landon Curt Noll.  All Rights Reserved.
+# Copyright (c) 2024,2026 by Landon Curt Noll.  All Rights Reserved.
 #
 # Permission to use, copy, modify, and distribute this software and
 # its documentation for any purpose and without fee is hereby granted,
@@ -95,7 +95,7 @@ shopt -s globstar	# enable ** to match all files and zero or more directories an
 
 # set variables referenced in the usage message
 #
-export VERSION="1.5.0 2025-04-17"
+export VERSION="1.5.1 2026-08-06"
 NAME=$(basename "$0")
 export NAME
 export V_FLAG=0

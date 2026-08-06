@@ -136,7 +136,7 @@ export LC_ALL="C"
 
 # set variables referenced in the usage message
 #
-export VERSION="2.1.2 2026-06-12"
+export VERSION="2.1.3 2026-08-06"
 NAME=$(basename "$0")
 export NAME
 export V_FLAG=0
@@ -375,11 +375,15 @@ function output_youtube_img_id
         return 4
     fi
 
+    # determine the video ID
+    #
     VIDEO_ID=$(grep -o -E -m 1 \
       -e 'youtube\.com/(watch\?v=|live/|embed/)[A-Za-z0-9_-]{11}' \
       -e 'youtu\.be/[A-Za-z0-9_-]{11}' "$README_PATH" 2>/dev/null |
       head -1 | grep -o -E '[A-Za-z0-9_-]{11}$')
 
+    # case: Video IDs for which YouTube has no maxresdefault.jpg
+    #
     local ID
     for ID in "${NO_MAXRES_ID_SET[@]}"; do
         if [[ $VIDEO_ID == "$ID" ]]; then
@@ -387,6 +391,8 @@ function output_youtube_img_id
         fi
     done
 
+    # print the video ID
+    #
     printf '%s\n' "$VIDEO_ID"
     return 0
 }
@@ -845,6 +851,9 @@ echo "YEAR=$YEAR_DIR"
 echo "-s"
 echo "OG_TYPE=article"
 
+
+# try to determine the YouTube ID
+#
 YOUTUBE_ID=$(output_youtube_img_id "$YYYY_DIR/README.md")
 status="$?"
 if [[ $status -ne 0 ]]; then
@@ -852,6 +861,9 @@ if [[ $status -ne 0 ]]; then
     exit 1
 fi
 
+
+# case: output YouTube metadata if we have it
+#
 if [[ -n $YOUTUBE_ID ]]; then
     echo "-s"
     echo "OG_IMAGE=https://i.ytimg.com/vi/$YOUTUBE_ID/maxresdefault.jpg"

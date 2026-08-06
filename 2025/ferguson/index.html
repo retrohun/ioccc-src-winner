@@ -520,9 +520,9 @@ it can start in one place and find its antipode.</p>
 <p>Please checkout the <a href="../challenge.html#ferguson">fun challenge(s)</a> for this winning entry.</p>
 <h2 id="authors-remarks">Author’s remarks:</h2>
 <h3 id="antipodal-map-plotter-on-ppm-equirectangular-images">Antipodal map plotter (on PPM <a href="https://en.wikipedia.org/wiki/Equirectangular_projection">equirectangular</a> images)</h3>
-<div id="remarks">
+<section id="remarks">
 <h3 id="antipodal-plotter-remarks">Antipodal plotter remarks</h3>
-</div>
+</section>
 <p>This is a FUN one!</p>
 <p>I’m sure many people have heard the claim that if you dig straight down you’ll
 eventually end up in China or some other place. This has a basis in reality but
@@ -822,9 +822,9 @@ easy because different sources say different numbers and I am not Landon :-)</p>
 <p>If this wins he’s welcome to correct any coordinates that are wrong in maps or
 the <a href="https://github.com/ioccc-src/winner/blob/master/2025/ferguson/try.sh">try.sh</a> script or in documentation, with much gratitude from this
 author!</p>
-<div id="alt">
+<section id="alt">
 <h3 id="alt-code">Alt code</h3>
-</div>
+</section>
 <p>The alt code, incidentally, randomises the lat lon and if you specify two args
 (input and output file) it’ll write the arrows to the output file! Thus the
 syntax is, after <code>make alt</code>:</p>
@@ -1166,9 +1166,9 @@ be on the eastern hemisphere south of the equator, if it’s south of the equato
 and on the eastern hemisphere then the antipodal point is north of the equator
 on the western hemisphere and so on. That is what the program is dong although
 I say more on this later.</p>
-<div id="rendering">
+<section id="rendering">
 <h4 id="how-the-arrows-are-rendered-for-educational-value-hint--">How the arrows are rendered (for educational value *HINT!* :-) )</h4>
-</div>
+</section>
 <p>This section explains a great way to render arrows on an image in an obscure
 way, though the obfuscation will make it rather hard to see. Still the little
 program (see next paragraph) should show the general idea before it was
@@ -1416,9 +1416,9 @@ the second invocation as well.</p>
 before the Earth was roundish, but it still feels to me like the person who
 created that system had quite lost it, maybe from being on the Sea too long. The
 question is whether I lost the plot with them, and did it wrong.</p>
-<div id="westley">
+<section id="westley">
 <h3 id="a-homage-to-brian-westleys-1992westley-mapper">A homage to Brian Westley’s 1992/westley mapper</h3>
-</div>
+</section>
 <p>Incidentally here’s an example with 1992/westley on China and Argentina, taken
 from my <a href="https://github.com/ioccc-src/winner/blob/master/2025/ferguson/westley.sh">westley.sh</a> script which uses my program to show antipodes
 (using the simpler invocation of my program) along with his (some changes were
@@ -1779,9 +1779,9 @@ asteroid ten kilometres wide so RUDELY slammed into them
 BLOODY STUPID (!!) asteroid flattened them, flattening the planet in the
 process. How ELSE did you think our planet got flat? A diet?</p>
 <div id="limitations">
-<div id="bugs">
+<section id="bugs">
 <h3 id="bugs-limitations">‘Bugs’ / ‘Limitations’</h3>
-</div>
+</section>
 </div>
 <p>I did read there are some places in the world share an antipodal point. This
 makes no sense to me because of the maths but certainly if you use coordinates
@@ -2311,9 +2311,9 @@ controlled and sanitisers seem to confirm this in my tests.</p>
 even true, and if such an image exists I don’t want to even see it as it would
 take A LOT of scrolling to appreciate it and it would take more disk space than
 is necessary (and WAY more than the IOCCC even allows!).</p>
-<div id="floating">
+<section id="floating">
 <h3 id="floating-point">Floating point</h3>
-</div>
+</section>
 <p>This program requires floating point. This is because it needs negative 0.
 Without this antipodes will be broken. See <a href="https://github.com/ioccc-src/winner/blob/master/2025/ferguson/small.c">small.c</a>. Try it like:</p>
 <pre><code>    make small
@@ -2331,9 +2331,9 @@ down makes me think he did manage something sneaky but it still had no choice
 but to truncate numbers).</p>
 <p>So floating points are required and negative 0 is obviously required too because
 of how antipodes work.</p>
-<div id="colours">
+<section id="colours">
 <h3 id="the-problem-with-colours">The problem with colours</h3>
-</div>
+</section>
 <p>I put a workaround in via the Makefile (see <a href="#compiling">Compiling</a>) but I want
 to explain the issue here.</p>
 <p>I already said the green and red analogy but there is actually another issue
@@ -2540,9 +2540,9 @@ things along with the lack of other things that would prevent plants from
 growing. It would be kind of fun in a way if there was another world inside
 Earth (there is in a sense a ‘world’ but not what Hollow Earthers think of as a
 world); there is a reason Journey to the Centre of the Earth sells after all.</p>
-<div id="compiling">
+<section id="compiling">
 <h3 id="compiling-warnings-and-educational-value-hint-to-judges--">Compiling / warnings (and educational value *HINT to judges* :-) )</h3>
-</div>
+</section>
 <p>First the more useful things: compiling. And yes there is a warning that can’t
 be disabled in some compilers, a warning that is dubious at best, namely it
 thinks that I don’t know what I am doing: ‘use of unary operator that may be
@@ -3054,9 +3054,9 @@ triangular.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</
 
 <!-- START: this line starts content generated by: bin/output-index-inventory.sh -->
 
-<div id="inventory">
+<section id="inventory">
 <h1 id="inventory-for-2025ferguson">Inventory for 2025/ferguson</h1>
-</div>
+</section>
 <h2 id="primary-files">Primary files</h2>
 <ul>
 <li><a href="https://github.com/ioccc-src/winner/blob/master/2025/ferguson/prog.c">prog.c</a> - entry source code</li>

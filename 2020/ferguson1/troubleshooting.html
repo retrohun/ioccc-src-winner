@@ -490,9 +490,9 @@ it as structured as possible/easiest to find.</p>
 <li><a href="#errors">Errors and error reporting</a></li>
 </ul>
 </div>
-<div id="topwall">
+<section id="topwall">
 <h2 id="the-top-wall-isnt-allsome-of-the-time-visible"><a href="#toc">The top wall isn’t (all/some of the time) visible!</a></h2>
-</div>
+</section>
 <p>Because the score line is dynamic in length depending on the terminal size it
 can happen that the score/status wraps to the next line(s). This can be fixed by
 modifying the status line (see <a href="HACKING.html">HACKING.html</a>) but
@@ -513,9 +513,9 @@ See the <a href="HACKING.html">HACKING.html</a> file for other data you
 can include (though there are some discrepancies here and there as you’ll
 see).</p></li>
 </ul>
-<div id="notmoving">
+<section id="notmoving">
 <h2 id="the-snake-isnt-moving"><a href="#toc">The snake isn’t moving!</a></h2>
-</div>
+</section>
 <p>Unless the game is paused this should not be happening. It can appear sometimes
 that there isn’t movement and sometimes it might have to take a moment to
 ‘unwind’ but as long as the head is moving then everything is fine.</p>
@@ -537,9 +537,9 @@ it’ll catch up; just give it the time it needs.</p></li>
 <li><p><strong>BOTTOM LINE</strong>: if you want more information then see the <a href="bugs.html">bugs.html</a>
 file.</p></li>
 </ul>
-<div id="invisiblehead">
+<section id="invisiblehead">
 <h2 id="i-cant-see-the-snake-head-or-other-part-of-the-snake"><a href="#toc">I can’t see the snake head (or other part of the snake)!</a></h2>
-</div>
+</section>
 <p>Possibly this could happen with too long a score line which I already discussed.
 It also used to be possible during cannibal mode whilst cannibalising: you would
 just have to continue moving on and you’d eventually find your head (assuming
@@ -553,9 +553,9 @@ same time see it!</p></li>
 score line is covering the wall, snake and even bug; I gave two resolutions to
 that earlier in this file. To get a recommended number of columns use <code>make test</code>.</p></li>
 </ul>
-<div id="invisiblebug">
+<section id="invisiblebug">
 <h2 id="i-cant-see-the-bug"><a href="#toc">I can’t see the bug!</a></h2>
-</div>
+</section>
 <p>This has happened to me a number of times and early in development there were
 times that I could swear I even saw it beyond the walls but this should not be a
 problem now if it ever was.</p>
@@ -585,9 +585,9 @@ since <code>*</code> is a regexp metacharacter). This has happened to me numerou
 <li><p><strong>RESOLUTION #3</strong>: if the colour contrast is not good for your eyes use the
 <a href="https://github.com/ioccc-src/winner/blob/master/2020/ferguson1/snake-colours.sh">snake-colours.sh</a> script to select a different colour scheme.</p></li>
 </ul>
-<div id="froze">
+<section id="froze">
 <h2 id="the-game-froze"><a href="#toc">The game froze!</a></h2>
-</div>
+</section>
 <p>This should not be possible either but without certain safety checks in place I
 have caused this (and I did this deliberately in development to find all the
 conditions I could to resolve them).</p>
@@ -651,9 +651,9 @@ then it’s <code>(maxy - 2) * (maxx - 2)</code>; above that would be:</p>
 kill the game by e.g. ctrl-c since the bug placement is stuck in a loop.
 This shouldn’t happen though.</p></li>
 </ul>
-<div id="bigsnake">
+<section id="bigsnake">
 <h2 id="the-game-gets-slower-as-the-snake-gets-bigger"><a href="#toc">The game gets slower as the snake gets bigger!</a></h2>
-</div>
+</section>
 <p>Realistically the game shouldn’t take that much memory but maybe in some very
 busy systems it would have a problem.</p>
 <ul>
@@ -667,9 +667,9 @@ problem. Otherwise it would be good to see if you can find a pattern: is it when
 the snake is bigger i.e. the screen is rather fuller than when you first begin?
 Or is the system rather busy?</p></li>
 </ul>
-<div id="headonly">
+<section id="headonly">
 <h2 id="i-set-size0-grow1-ate-a-bug-but-still-only-the-head-was-visible-why"><a href="#toc">I set <code>SIZE=0 GROW=1</code>, ate a bug but still only the head was visible! Why?</a></h2>
-</div>
+</section>
 <ul>
 <li><p><strong>RESOLUTION #0</strong>: the size includes the head but what should it show if the size
 is 0? The head is the obvious choice so once you do get to size 1 you will still
@@ -684,9 +684,9 @@ you moving the head until you find a body to use! Once you have size &gt;= 2
 then cannibalism mode counts.</p></li>
 <li><p><strong>BOTTOM LINE</strong>: in some senses <code>SIZE=0</code> and <code>SIZE=1</code> are the same thing.</p></li>
 </ul>
-<div id="monochrome">
+<section id="monochrome">
 <h2 id="i-like-black-text-on-a-white-background-but-even-with-a-white-background-terminal-it-ends-up-black"><a href="#toc">I like black text on a white background but even with a white background terminal it ends up black!</a></h2>
-</div>
+</section>
 <p>This is a curses thing but fortunately it should be easy enough to solve.</p>
 <ul>
 <li><p><strong>RESOLUTION #0</strong>: try setting the terminal to monochrome for the invocation of
@@ -709,9 +709,9 @@ eat too many bytes in the entry (I cite the functions in the
 <p>I discuss colours and terminals in much more detail in
 <a href="terminals.html">terminals.html</a>.</p></li>
 </ul>
-<div id="toodark">
+<section id="toodark">
 <h2 id="the-text-is-hard-to-see-not-bright-enough"><a href="#toc">The text is hard to see (not bright enough)!</a></h2>
-</div>
+</section>
 <ul>
 <li><p><strong>RESOLUTION #0</strong>: make sure that your terminal settings have for bold text a
 brighter font. The way I have my terminal profiles set up is to use bright
@@ -727,9 +727,9 @@ also try changing the colours of the game. For that see
 <a href="https://github.com/ioccc-src/winner/blob/master/2020/ferguson1/snake-colours.sh">snake-colours.sh</a> and
 <a href="https://github.com/ioccc-src/winner/blob/master/2020/ferguson1/play.sh">play.sh</a>.</p></li>
 </ul>
-<div id="movefaster">
+<section id="movefaster">
 <h2 id="can-i-move-the-snake-faster-temporarily-without-having-to-modify-the-wait-time"><a href="#toc">Can I move the snake faster temporarily without having to modify the wait time?</a></h2>
-</div>
+</section>
 <p>Yes. The <code>getch()</code> call is non-blocking when the timeout value is positive so
 it’s up to that number of milliseconds.</p>
 <ul>
@@ -741,9 +741,9 @@ hit the key you can have more control over the speed - as long as it is quicker
 than the regular wait time. For negative wait time (drawing mode) you have to
 hit a key every time to move because it is blocking.</p></li>
 </ul>
-<div id="envvars">
+<section id="envvars">
 <h2 id="on-environmental-variables-more-generally-and-string-to-int-conversions"><a href="#toc">On environmental variables more generally and string to int conversions</a></h2>
-</div>
+</section>
 <p>What happens if you do:</p>
 <pre><code>    WALLS= ./prog</code></pre>
 <p>Can you run into the wall since you didn’t specify a value and the default is 1?
@@ -782,9 +782,9 @@ example:</p>
 <p>I discuss the signed/unsigned issue to do with curses and sizes in C being
 unsigned in <a href="bugs.html">bugs.html</a> but probably there isn’t
 anything more to say here.</p>
-<div id="errors">
+<section id="errors">
 <h2 id="errors-and-error-reporting"><a href="#toc">Errors and error reporting</a></h2>
-</div>
+</section>
 <p>If curses fails to initialise you should get an error that says ‘curses error’
 and you have every right to curse it to hell if that’s what you so wish.
 Apparently curses will report an error itself if that function fails but that

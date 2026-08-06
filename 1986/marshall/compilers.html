@@ -508,9 +508,9 @@ because of the call to the <code>_exit(2)</code> syscall (see below).</p>
 <p><code>clang</code> works fine with the loop removed if the optimiser is disabled. Once we
 enable it, though, it will generate code that prints the string twice and
 dumps core, just like before!</p>
-<div id="exit">
+<section id="exit">
 <h3 id="what-about-the-call-to-the-_exit2-syscall">What about the call to the <code>_exit(2)</code> syscall?</h3>
-</div>
+</section>
 <p>The call <em>was</em>:</p>
 <pre><code>    _exit(argv[(int)*argc-2/cc[1*(int)*argc]|-1&lt;&lt;4]);</code></pre>
 <p>In the fixed code, these variables are simply commented out so the code does

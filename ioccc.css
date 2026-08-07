@@ -1134,7 +1134,7 @@ blockquote {
 	font-size: 0.9em;
     }
     .header img {
-	visibility: none;
+	display: none;
 	width: 0;
 	border: 0;
 	padding: 0;

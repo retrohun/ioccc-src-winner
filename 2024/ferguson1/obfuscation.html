@@ -14,6 +14,18 @@
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 <meta name="description" content="obfuscation.md for 2024/ferguson1">
 <meta name="keywords" content="IOCCC, 2024/ferguson1, obfuscation.md">
+<link rel="canonical" href="https://www.ioccc.org/2024/ferguson1/obfuscation.html">
+<meta property="og:site_name" content="IOCCC">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ioccc.org/2024/ferguson1/obfuscation.html">
+<meta property="og:title" content="The International Obfuscated C Code Contest">
+<meta property="og:description" content="obfuscation.md for 2024/ferguson1">
+<meta property="og:image" content="https://www.ioccc.org/png/ioccc-card-1280.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="The International Obfuscated C Code Contest">
+<!-- While many platforms use twitter:card, the IOCCC doesn't use Twitter -->
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -429,8 +441,11 @@
   <a href="../../2011/zucker/index.html">
       <img src="../../png/ioccc.png"
 	   alt="IOCCC image by Matt Zucker"
-	   width=300
-	   height=110>
+	   width=400
+	   height=147
+       sizes="(max-width: 2000px) 400px, 20vw"
+       srcset="../../png/ioccc.png 400w, ../../png/ioccc-600.png 600w, ../../png/ioccc-900.png 900w"
+      >
   </a>
   <h1>The International Obfuscated C Code Contest</h1>
   <h2>obfuscation.html for 2024/ferguson1</h2>
@@ -1495,9 +1510,9 @@ save a measly four bytes (which is why I’m not concerned about using it) but
 that might not be enough for anything meaningful so this is much better.</p>
 <p>After I talk about the <a href="#data">Data files</a> I will discuss how this is definitely
 well-rounded in obfuscation.</p>
-<div id="data">
+<section id="data">
 <h4 id="data-file-more-obfuscation-and-portability-and-ensuring-it-can-be-used-properly">Data file: more obfuscation and portability and ensuring it can be used properly</h4>
-</div>
+</section>
 <p><strong>IMPORTANT NOTE TO THE JUDGES</strong>: if any problems in the data file exist,
 remember to regenerate it as described in the Judges section and/or the
 Troubleshooting section in the <a href="index.html#devil">remarks above</a>. It is greatly
@@ -1776,9 +1791,9 @@ near 200 <code>char *</code>s in a single <code>char *</code> (NOT a <code>char 
 interesting and it’s one of the reasons I’m quite proud of it.</p>
 <p>Interesting thing to ponder: what happens if a string is too long for the
 padding?</p>
-<div id="litmus">
+<section id="litmus">
 <h3 id="litmus-test">Litmus test</h3>
-</div>
+</section>
 <p>I did not write about this as much in my submission but since I made some
 updates post winning I figured I would write about the litmus test that I
 devised, to know that everything is working right.</p>
@@ -1847,9 +1862,9 @@ have missed it until I checked every event. This is how perilous it is with
 <code>goto</code>s but as I noted even though I have (pre-processed) 152 <code>goto</code>s it works.
 Of course it shouldn’t but it does.</p>
 <div id="conclusions">
-<div id="conclusion">
+<section id="conclusion">
 <h3 id="conclusions">Conclusions</h3>
-</div>
+</section>
 </div>
 <p>A question: is this well-rounded in obfuscation as the judges like? Definitely.</p>
 <p>The fact that close to 200 NUL terminated strings are in a single <code>char *</code> (!!),

@@ -12,8 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>2018/ferguson - Best use of weasel words</title>
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<meta name="description" content="2018 IOCCC entry ferguson - Best use of weasel words">
+<meta name="description" content="Dawkins' weasel simulator. 2018 IOCCC entry ferguson - Best use of weasel words">
 <meta name="keywords" content="IOCCC, 2018, IOCCC 2018, IOCCC entry, ferguson, Best use of weasel words">
+<link rel="canonical" href="https://www.ioccc.org/2018/ferguson/index.html">
+<meta property="og:site_name" content="IOCCC">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.ioccc.org/2018/ferguson/index.html">
+<meta property="og:title" content="2018/ferguson - Best use of weasel words">
+<meta property="og:description" content="Dawkins' weasel simulator. 2018 IOCCC entry ferguson - Best use of weasel words">
+<meta property="og:image" content="https://www.ioccc.org/png/ioccc-card-1280.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="The International Obfuscated C Code Contest">
+<!-- While many platforms use twitter:card, the IOCCC doesn't use Twitter -->
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -429,8 +441,11 @@
   <a href="../../2011/zucker/index.html">
       <img src="../../png/ioccc.png"
 	   alt="IOCCC image by Matt Zucker"
-	   width=300
-	   height=110>
+	   width=400
+	   height=147
+       sizes="(max-width: 2000px) 400px, 20vw"
+       srcset="../../png/ioccc.png 400w, ../../png/ioccc-600.png 600w, ../../png/ioccc-900.png 900w"
+      >
   </a>
   <h1>The International Obfuscated C Code Contest</h1>
   <h2>2018/ferguson - Best use of weasel words</h2>
@@ -538,9 +553,9 @@ while using more Cenozoic minded code migration, read <a href="rpm.html">rpm.htm
 <p>If you find yourself in an evolutionary dead end, try:</p>
 <pre><code>    man ./weasel.1</code></pre>
 <h2 id="authors-remarks">Author’s remarks:</h2>
-<div id="toc">
+<section id="toc">
 <h3 id="table-of-contents">Table of Contents</h3>
-</div>
+</section>
 <ul>
 <li><a href="#preface">Preface</a></li>
 <li><a href="#what">What it is</a></li>
@@ -615,9 +630,9 @@ dedicated to this entry beyond what will be published on the IOCCC website.</p>
 the universe type up even just Hamlet. This, with my brief foray into the Weasel
 program, was fun and amusing to read, as well as interesting. I give my comments
 at <a href="#monkey2024">my 2024 update</a>.</p>
-<div id="what">
+<section id="what">
 <h3 id="what-it-is">What it is</h3>
-</div>
+</section>
 <p>Skip to <a href="#how">How it works</a>.</p>
 <p>It is an implementation of Richard Dawkins’ <a href="https://en.wikipedia.org/wiki/Weasel_program">Weasel program</a> (Wikipedia).
 According to Wikipedia in chapter three of his book <a href="https://en.wikipedia.org/wiki/The_Blind_Watchmaker">The Blind Watchmaker</a>
@@ -647,9 +662,9 @@ more details.</p>
 algorithm) towards the solution of the string <code>METHINKS IT IS LIKE A WEASEL</code>
 (note that I use <code>toupper()</code> so it doesn’t matter what case the input is the
 comparison and output will always be capitalised).</p>
-<div id="how">
+<section id="how">
 <h3 id="how-it-works">How it works</h3>
-</div>
+</section>
 <p>Skip to <a href="#hints">Hints</a>.</p>
 <p>Here you can find a general explanation of a <em><a href="https://web.archive.org/web/20180308131613/http://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html">genetic algorithm</a></em> as well as a
 brief history. Although the link provides more information (including images to
@@ -763,9 +778,9 @@ can actually produce but there is a certain type of input error that might
 string; some I will document here (the summary being in the man page). You can
 join options but there is a caveat with spaces and <code>-r</code> option as well as
 the target string (see below).</p>
-<div id="quiet-mode">
+<section id="quiet-mode">
 <h4 id="enable-quiet-output">Enable quiet output:</h4>
-</div>
+</section>
 <pre><code>    -q</code></pre>
 <p>This means don’t print the generation and offspring output; only print (some) of
 the options set (this is always done but wouldn’t usually be seen due to verbose
@@ -877,9 +892,9 @@ the string is of length 28 (the default) then all 28 characters in each
 offspring of each generation will be assigned a pseudo-randomly positioned
 character in the keyboard. If you want to enable this specially you can use the
 <code>-m</code> option (<em>-m for monkey</em>).</p>
-<div id="invocations">
+<section id="invocations">
 <h4 id="example-invocations">Example Invocations</h4>
-</div>
+</section>
 <p>Skip to <a href="#error">Input Error Example</a>.</p>
 <p>The following examples are used to demonstrate better the command line parsing.
 In order to do that though I had to first document the <code>-m</code> option because
@@ -1063,9 +1078,9 @@ search for <code>TEST</code>. In other words <strong>if you want to pass options
 script you will have to directly pass the options to the script</strong> like the above
 example shows (but the strings will still only be read from the
 <code>test-strings.txt</code> file).</p>
-<div id="error">
+<section id="error">
 <h4 id="input-error-example">Input Error Example</h4>
-</div>
+</section>
 <p>Skip to <a href="#obfuscation">Obfuscation</a>.</p>
 <p>There is a type of input error, as I said, that might appear to be a bug. What
 actually is going on though is due to a technicality on how spaces are printed
@@ -1150,12 +1165,12 @@ straight:</p>
 some of it might look like a blob (for certain definitions of ‘blob’ :) ) but
 this is clearly false; <em>as all good programmers know if something is potentially
 confusing or misleading it should be made clear in the comments! :)</em></p>
-<div id="build">
+<section id="build">
 <h3 id="how-to-build">5. How to build</h3>
-</div>
-<div id="constants">
+</section>
+<section id="constants">
 <h4 id="s-m-and-n-constants">S, M and N Constants</h4>
-</div>
+</section>
 <p>Skip to <a href="#compiling">Compilation</a>.</p>
 <p>There are three <code>#define</code>d constants that can be redefined at compilation to modify the
 behaviour of the program in a number of ways (see the
@@ -1196,9 +1211,9 @@ and the larger the values the more memory it’ll require.</p>
 <p>The Makefile simplifies how to reconfigure this value with the variable
 <code>OFFSPRING</code>:</p>
 <pre><code>    make clobber OFFSPRING=55 all</code></pre>
-<div id="compiling">
+<section id="compiling">
 <h3 id="compilation">Compilation</h3>
-</div>
+</section>
 <p>Skip to <a href="#portability">Portability</a>.</p>
 <p>The following options <strong>must always be passed to the compiler:</strong></p>
 <pre><code>    -DQ=&#39;typedef&#39; -D&#39;g(o)&#39;=&#39;goto o;&#39; -D&#39;w(x)&#39;=&quot;x:&quot; -D&#39;H(main)&#39;=&#39;r(main)&#39;</code></pre>
@@ -1274,9 +1289,9 @@ and easy fashion if ever; or any other meddling including being petulant and/or
 unreasonable monkeys. I will say though that there is at least one place I see
 after having won that could be slightly more efficient (can you find it?); I am
 however leaving it as it is because this is what won.</p>
-<div id="rpm">
+<section id="rpm">
 <h3 id="installing">Installing</h3>
-</div>
+</section>
 <p>Skip to <a href="#thoughts">Final thoughts</a>.</p>
 <p>I have included a RPM spec file for those with a Red Hat based Linux
 distribution; see <a href="rpm.html">rpm.html</a> for details (including why I implemented
@@ -1284,9 +1299,9 @@ this) if for some (strange or maybe even mad) reason you’re interested, which
 I fully realise and always realised means nobody but me. Indeed not only do I
 know nobody else would use it but I would recommend against it as well. It was a
 personal thing and since the Judges remarked about it I kept it in.</p>
-<div id="thoughts">
+<section id="thoughts">
 <h3 id="final-thoughts">Final thoughts</h3>
-</div>
+</section>
 <p>Skip to <a href="#winning">Winning comments</a>.</p>
 <p>The judges suggested that making them laugh helps entries chance of winning.
 Well <em>laughter helps everything</em> so in case you haven’t seen - and <em>even if you
@@ -1296,9 +1311,9 @@ that book) I include it below; because I agree that looking at a lot of twisted
 code must be quite difficult (though maybe not as much as if you were to have to
 look at Microsoft Windows code or code for Windows in any case ? :)) and these
 two things I think are rather amusing (in order of least to most):</p>
-<div id="dmr">
+<section id="dmr">
 <h4 id="dennis-ritchies-anti-foreword">Dennis Ritchie’s Anti-Foreword:</h4>
-</div>
+</section>
 <blockquote>
 <p>Anti-Foreword</p>
 <p>By Dennis Ritchie
@@ -1339,9 +1354,9 @@ reeks too much of contempt and of envy.</p>
 and since it doesn’t break his message it’s not broken - it’s just obfuscated
 albeit not very much (and it still <em>‘compiles’!</em>); and isn’t that what this
 contest is about? :)</p>
-<div id="ken">
+<section id="ken">
 <h4 id="ken-thompsons-ending">Ken Thompson’s ending:</h4>
-</div>
+</section>
 <blockquote>
 <p>Creators Admit C, Unix Were Hoax</p>
 <p>FOR IMMEDIATE RELEASE</p>
@@ -1410,9 +1425,9 @@ I’m missing but either way it’s a funny piece. It could also be for irony it
 (actually I had previously thought of somehow implementing something like that
 for the contest but decided for the message by itself in the end). I would
 prefer believing that whether true or not.</p>
-<div id="winning">
+<section id="winning">
 <h3 id="winning-comments-thanks-dedications-links-etc.">Winning comments, thanks, dedications, links, etc.</h3>
-</div>
+</section>
 <p>I feel incredibly honoured, privileged and I am extremely happy and proud to
 have won! I am more proud and happy about this than anything I have ever done in
 my life and I don’t think there can be anything else I can be more proud of in
@@ -1467,9 +1482,9 @@ what’s already published on the IOCCC website). I have commentary on the other
 winning entries as well.</p>
 <p>If you wish to contact me please do so. Please contact via mastodon. You can try
 email but I’m more likely to respond to mastodon messages.</p>
-<div id="monkey2024">
+<section id="monkey2024">
 <h3 id="update-on-the-infinite-monkey-theorem-2024">Update on the Infinite Monkey Theorem, 2024</h3>
-</div>
+</section>
 <p>On 1 November 2024 I saw an article called <a href="https://phys.org/news/2024-10-monkey-unable-hamlet-lifetime-universe.html">Typing monkey would be unable to
 produce ‘Hamlet’ within the lifetime of the universe, study
 finds</a>.
@@ -1531,9 +1546,9 @@ good fun, I suppose.</p>
 
 <!-- START: this line starts content generated by: bin/output-index-inventory.sh -->
 
-<div id="inventory">
+<section id="inventory">
 <h1 id="inventory-for-2018ferguson">Inventory for 2018/ferguson</h1>
-</div>
+</section>
 <h2 id="primary-files">Primary files</h2>
 <ul>
 <li><a href="https://github.com/ioccc-src/winner/blob/master/2018/ferguson/prog.c">prog.c</a> - entry source code</li>

@@ -12,8 +12,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>2020/ferguson1 - Don't tread on me award</title>
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<meta name="description" content="2020 IOCCC entry ferguson1 - Don't tread on me award">
+<meta name="description" content="Snake game. 2020 IOCCC entry ferguson1 - Don't tread on me award">
 <meta name="keywords" content="IOCCC, 2020, IOCCC 2020, IOCCC entry, ferguson1, Don't tread on me award">
+<link rel="canonical" href="https://www.ioccc.org/2020/ferguson1/index.html">
+<meta property="og:site_name" content="IOCCC">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.ioccc.org/2020/ferguson1/index.html">
+<meta property="og:title" content="2020/ferguson1 - Don't tread on me award">
+<meta property="og:description" content="Snake game. 2020 IOCCC entry ferguson1 - Don't tread on me award">
+<meta property="og:image" content="https://www.ioccc.org/png/ioccc-card-1280.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta property="og:image:alt" content="The International Obfuscated C Code Contest">
+<!-- While many platforms use twitter:card, the IOCCC doesn't use Twitter -->
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -429,8 +441,11 @@
   <a href="../../2011/zucker/index.html">
       <img src="../../png/ioccc.png"
 	   alt="IOCCC image by Matt Zucker"
-	   width=300
-	   height=110>
+	   width=400
+	   height=147
+       sizes="(max-width: 2000px) 400px, 20vw"
+       srcset="../../png/ioccc.png 400w, ../../png/ioccc-600.png 600w, ../../png/ioccc-900.png 900w"
+      >
   </a>
   <h1>The International Obfuscated C Code Contest</h1>
   <h2>2020/ferguson1 - Don't tread on me award</h2>
@@ -689,12 +704,12 @@ took fewer bytes and the negative shedding is a positive consequence of
 unsigned arithmetic.</p></li>
 </ul>
 <p>On a more serious note look at <a href="bugs.html">bugs.html</a>.</p>
-<div id="naqs">
+<section id="naqs">
 <h3 id="naqsiaqs-neverinfrequently-asked-questions">NAQs/IAQs (Never/Infrequently Asked Questions)</h3>
-</div>
-<div id="inspirations">
+</section>
+<section id="inspirations">
 <h4 id="do-i-have-any-inspirations-for-this-entry">Do I have any inspirations for this entry?</h4>
-</div>
+</section>
 <p>There are two in particular. First is a long time mate of mine wrote a bash
 implementation of Snake several years ago (uncoloured, no cheat modes, hardcoded
 dimensions etc. - in fact everything was hardcoded).</p>
@@ -722,9 +737,9 @@ it was done in <a href="https://en.wikipedia.org/wiki/Surround_(video_game)">Sur
 <p>In <a href="https://en.wikipedia.org/wiki/Surround_(video_game)">Surround</a> each move you made you would grow in size by one. This is what
 inspired the shedding mode. Anyway I always loved the game and it’s similar to
 Snake in several ways.</p>
-<div id="features">
+<section id="features">
 <h4 id="are-there-any-features-i-thought-of-that-i-wanted-to-implement-but-did-not-get-to-for-some-reason-or-another">Are there any features I thought of that I wanted to implement but did not get to for some reason or another?</h4>
-</div>
+</section>
 <p>Yes. I thought it would be fun if there were other obstacles for the snake (in
 my mind I was thinking of barriers like the walls but in the field).</p>
 <p>I also thought it would be fun to have more than one bug at some point after say
@@ -741,9 +756,9 @@ character set and I didn’t see any diagonal arrows. I suppose I could have it
 not show the arrows but then that brings an old problem back.</p>
 <p>Nevertheless I am quite happy with the features in the game and I hope everyone
 who plays it enjoys it as much as I enjoyed writing/playing it.</p>
-<div id="easier">
+<section id="easier">
 <h4 id="are-there-ways-that-one-can-make-this-game-easier">Are there ways that one can make this game easier?</h4>
-</div>
+</section>
 <p>I can think of at the least the following:</p>
 <ul>
 <li>Bigger screen will allow for freer movement (at least for more time?).</li>
@@ -777,9 +792,9 @@ different combinations than I have given.</li>
 considered a filthy cheat but both modes are quite fun (one being enabled by
 default; does that mean it’s not actually a cheat mode?).</li>
 </ul>
-<div id="harder">
+<section id="harder">
 <h4 id="are-there-ways-to-make-it-harder">Are there ways to make it harder?</h4>
-</div>
+</section>
 <ul>
 <li>Decrease the size of the game.</li>
 <li>Decrease the size of the snake growth (and initial snake size).</li>
@@ -825,27 +840,27 @@ chocolate cake, play Snake, sleep, … For a great recipe see below.</li>
 you make use of your talents for financial gain or at least a world record.
 Either way I tip my proverbial snakeskin hat to you (animal cruelty but a pun is
 a pun and every pun deserves to be shed).</p>
-<div id="moult">
+<section id="moult">
 <h4 id="how-do-snakes-grow-in-real-life">How do snakes grow in real life?</h4>
-</div>
+</section>
 <p>They grow through a process called moulting - shedding their skin (other
 creatures also moult). This takes place over some days and unlike humans snakes
 never stop growing (though growth slows down as they mature). I chose the
 variables <strong>SHED</strong> and <strong>SHEDS</strong> for simplicity and because the words are
 shorter. I don’t like the words because it’s rather a misnomer but what I had
 chosen before was longer - STRETCH and STRETCHES.</p>
-<div id="other">
+<section id="other">
 <h4 id="any-other-interesting-things-about-snakes">Any other interesting things about snakes?</h4>
-</div>
+</section>
 <p>For the fascinating science behind snake slithering see <a href="https://www.bbc.co.uk/news/science-environment-35563941">Snake walk: The physics
 of slithering</a>. For the bizarre thought of snake human hybrids see <a href="http://www.macroevolution.net/snake-human-hybrids.html">human
 snakes</a>. The latter is hard to comprehend and there are some sad tails (tales)
 in there too because I believe that people actually believe in this (how/why I
 do not know) and they really do tell the truth as they see it (even if
 impossible).</p>
-<div id="opposite">
+<section id="opposite">
 <h4 id="why-can-you-go-the-opposite-direction-and-so-immediately-die-when-not-cannibalising">Why can you go the opposite direction and so immediately die when not cannibalising?</h4>
-</div>
+</section>
 <p>When Ilya Kurdyukov was playing with this he questioned why this is possible
 when other implementations don’t have it this way. There are a few reasons.</p>
 <p>First is that the friend’s implementation had it that way and it had been a long
@@ -859,9 +874,9 @@ for itself but in the game it is and I went all the way instead of only halfway.
 <p>It also would take more bytes and that’s a problem with IOCCC rule 2b.</p>
 <p>But if you have a problem with it you can always enable cannibalism and keep
 walls passable and not worry about dying.</p>
-<div id="chocolatecake">
+<section id="chocolatecake">
 <h4 id="do-you-have-any-delicious-chocolate-cake-recipes">Do you have any <strong>DELICIOUS CHOCOLATE CAKE</strong> recipes?</h4>
-</div>
+</section>
 <p>Why yes I do! So good in fact that even my late stepmum who didn’t even like
 chocolate (except white chocolate) loved this cake. It’s a double-layered
 chocolate fudge cake. See the file <a href="chocolate-cake.html">chocolate-cake.html</a>
@@ -886,9 +901,9 @@ out bad! Many people have made this mistake ‘because they know better’. You�
 been warned.</li>
 <li>Pay attention to the rest of the notes as well! They’re crucial.</li>
 </ul>
-<div id="alt">
+<section id="alt">
 <h4 id="what-are-the-files-prog.2.c-prog.3.c-prog.3-j.c-and-prog.alt.c">What are the files prog.2.c, prog.3.c, prog.3-j.c and prog.alt.c ?</h4>
-</div>
+</section>
 <p>I submitted three Snake versions; these are the other layouts for those few
 (more likely none) who are interested to see them.</p>
 <p>The <a href="https://github.com/ioccc-src/winner/blob/master/2020/ferguson1/prog.2.c">prog.2.c</a> has more digraphs but I think no other significant differences.</p>
@@ -902,9 +917,9 @@ it’s used in both <a href="snake-colours.sh">snake-colours.sh</a> and <a href=
 first, clearing the screen, which the play.sh and snake-colours.sh scripts also
 both do.</p>
 <h2 id="authors-dedication">Author’s dedication:</h2>
-<div id="winning">
+<section id="winning">
 <h3 id="winning-thoughts-dedications-and-thanks">Winning thoughts, dedications and thanks</h3>
-</div>
+</section>
 <p>Once again I’m honoured to win along with some of the other veterans who I have
 a huge amount of respect for; there’s <a href="../../authors.html#Don_Yang">Don Yang</a>, <a href="../../authors.html#Dave_Burton">Dave
 Burton</a>, <a href="../../authors.html#Yusuke_Endoh">Yusuke Endoh</a>
@@ -969,9 +984,9 @@ email but I’m more likely to respond to mastodon messages.</p>
 
 <!-- START: this line starts content generated by: bin/output-index-inventory.sh -->
 
-<div id="inventory">
+<section id="inventory">
 <h1 id="inventory-for-2020ferguson1">Inventory for 2020/ferguson1</h1>
-</div>
+</section>
 <h2 id="primary-files">Primary files</h2>
 <ul>
 <li><a href="https://github.com/ioccc-src/winner/blob/master/2020/ferguson1/prog.c">prog.c</a> - entry source code</li>

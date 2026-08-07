@@ -46,14 +46,6 @@
             "entry_text" : "script to try entry"
         },
         {
-            "file_path" : "prog.html",
-            "inventory_order" : 200,
-            "OK_to_edit" : false,
-            "display_as" : "html",
-            "display_via_github" : false,
-            "entry_text" : "run emulator in a browser"
-        },
-        {
             "file_path" : "2024_straadt.tar.bz2",
             "inventory_order" : 1415926535,
             "OK_to_edit" : false,

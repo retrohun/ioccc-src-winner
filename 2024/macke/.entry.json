@@ -46,6 +46,14 @@
             "entry_text" : "script to try entry"
         },
         {
+            "file_path" : "prog.html",
+            "inventory_order" : 200,
+            "OK_to_edit" : false,
+            "display_as" : "html",
+            "display_via_github" : false,
+            "entry_text" : "run emulator in a browser"
+        },
+        {
             "file_path" : "wasm_include/stdio.h",
             "inventory_order" : 200,
             "OK_to_edit" : true,

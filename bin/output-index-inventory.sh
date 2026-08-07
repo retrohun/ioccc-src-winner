@@ -134,7 +134,7 @@ export LC_ALL="C"
 
 # set variables referenced in the usage message
 #
-export VERSION="2.0.3 2026-05-07"
+export VERSION="2.0.4 2026-08-06"
 NAME=$(basename "$0")
 export NAME
 export V_FLAG=0
@@ -616,14 +616,14 @@ if [[ -z $NOOP ]]; then
 	# Any inventory_order that is 10 or more decimal digits is considered a secondary file.
 	#
 	echo '<div id="inventory">'
-	echo '# Inventory for' "$YYYY_DIR"
+	echo '## Inventory for' "$YYYY_DIR"
 	echo '</div>'
 	echo
-	echo '## Primary files'
+	echo '### Primary files'
 	echo
 	grep -E '^[0-9][0-9]{0,8} ' "$TMP_MANIFEST" | LC_ALL=C sort -k 1n -k 3.2d | sed -f "$HTML_SED" -e 's/^[0-9][0-9]* //'
 	echo
-	echo '## Secondary files'
+	echo '### Secondary files'
 	echo
 	grep -E '^[1-9][0-9]{9,} ' "$TMP_MANIFEST" | LC_ALL=C sort -k 1n -k 3.2d | sed -f "$HTML_SED" -e 's/^[0-9][0-9]* //'
 	echo

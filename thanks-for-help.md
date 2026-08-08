@@ -7263,6 +7263,35 @@ Despite all that, we still welcome him as an IOCCC Helper!
 Jump to: [top](#)
 
 
+<div id="uellenberg">
+### Jonah Uellenberg
+</div>
+
+[Jonah Uellenberg](authors.html#Jonah_Uellenberg) provided some
+important changes to the website such as to improve the header image:
+
+  <a href="2011/zucker/index.html">
+      <img src="png/ioccc.png"
+	   alt="IOCCC image by Matt Zucker"
+	   width=400
+	   height=147
+       sizes="(max-width: 2000px) 400px, 20vw"
+       srcset="png/ioccc.png 400w, png/ioccc-600.png 600w, png/ioccc-900.png 900w"
+      >
+  </a>
+
+**Jonah Uellenberg** provided enhanced renderings, and improved social
+embeds. Notably, entry embeds now include the abstract and an embed image,
+utilizing the YouTube thumbnail when available.
+
+We sincerely appreciate the diligent efforts and attention to detail
+that **Jonah Uellenberg** dedicated to refining our header image and
+significantly enhancing social embeds.
+
+
+Jump to: [top](#)
+
+
 <div id="bisqwit">
 ### Joel Yliluoma
 </div>

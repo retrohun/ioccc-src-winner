@@ -213,7 +213,7 @@ echo "Again, notice the scaling of the arrows." 1>&2
 echo 1>&2
 echo "Fun fact: this 'country' is Sealand, which is basically a platform in the sea" 1>&2
 echo "that was used during the Second World War; it is more correctly called a 'micronation'," 1>&2
-echo "though there are some who aggressively against even that." 1>&2
+echo "though there are some who are aggressively against even that." 1>&2
 echo "For more fun details see: https://sealandgov.org/" 1>&2
 echo 1>&2
 echo "We have a few more to do despite the fact that many (if not most) people are" 1>&2

@@ -7272,9 +7272,9 @@ important changes to the website such as to improve the header image:
 
   <a href="2011/zucker/index.html">
       <img src="png/ioccc.png"
-	   alt="IOCCC image by Matt Zucker"
-	   width=400
-	   height=147
+       alt="IOCCC image by Matt Zucker"
+       width=400
+       height=147
        sizes="(max-width: 2000px) 400px, 20vw"
        srcset="png/ioccc.png 400w, png/ioccc-600.png 600w, png/ioccc-900.png 900w"
       >

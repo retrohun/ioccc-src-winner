@@ -62,11 +62,14 @@ int main(int argc, char **argv)
     if (argc == 9)
     {
         /*
-         * No. I don't make it an error if it's not ASCII. I could but since
-         * it's binary (either the value or not) I don't bother.
+         * the standard says that for the is*() and to*() functions of ctype.h
+         * they must be represented as an unsigned char or EOF (though the
+         * function takes an int). EOF is guaranteed to be a negative number but
+         * it is not guaranteed to be -1. We cast the args to unsigned char and
+         * compare that to the character we need.
          */
-        a = toupper(argv[4][0]=='S');
-        b = toupper(argv[8][0]=='W');
+        a = toupper((unsigned char)argv[4][0])=='S';
+        b = toupper((unsigned char)argv[8][0])=='W';
 
         lat = dec(strtod(argv[1], 0), strtod(argv[2], 0), strtod(argv[3], 0), a);
         lon = dec(strtod(argv[5], 0), strtod(argv[6], 0), strtod(argv[7], 0), b);
@@ -78,11 +81,7 @@ int main(int argc, char **argv)
     }
     else
     {
-        /*
-         * No. I don't make it an error if it's not ASCII. I could but since
-         * it's binary (either the value or not) I don't bother.
-         */
-        c = toupper(argv[4][0]);
+        c = toupper((unsigned char)argv[4][0]);
         alt = dec(strtod(argv[1], 0), strtod(argv[2], 0), strtod(argv[3], 0), c=='S'||c=='W');
 
         if(c == 'S' || c == 'N')
